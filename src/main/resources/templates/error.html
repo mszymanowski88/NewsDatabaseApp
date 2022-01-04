@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Wrong Input</h1>
+
+<button onclick="goBack()">Go Back</button>
+
+<p>You need to creat DB </p>
+
+<p style="background-color:#F0E68C;">===============Create DB============================ </p>
+<form th:action="@{/create}"  method="post">
+
+    <p><input type="submit" value="Create"></p>
+    <br>
+</form>
+
+<script>
+    function goBack() {
+        window.history.back();
+    }
+</script>
+</body>
+</html>
