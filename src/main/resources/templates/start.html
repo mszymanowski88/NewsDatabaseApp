@@ -4,71 +4,37 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 50%;
+        }
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 16px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
 </head>
 <body>
 
 
-<!--    <form th:action="@{/add}" th:object="${news}" method="post">-->
-
-<!--        </p>-->
-<!--&lt;!&ndash;        <p>Brand: <input type="text" th:field="*{userInput}"></p>&ndash;&gt;-->
-<!--        <input  type="text" th:filed="*{userQueryGuardian(userInput)}">-->
-<!--&lt;!&ndash;        <input  type="text" th:value="*{userInput}">&ndash;&gt;-->
-<!--        <p><input type="submit" value="Searc"></p>-->
-
-
-<!--    </form>-->
-
 <p style="background-color:#F0E68C;">===============Welcom in Guardian News Database=========================== </p>
 <p style="background-color:#F0E68C;">Input topic you are looking for: </p>
 <form th:action="@{/add}" method="post" >
-    <input type="text" th:name="participant"/>
-<!--    <input type="submit"/>-->
+    <input type="text" th:name="input"/>
+
     <button type="submit">Search</button>
 </form>
 
-<!--<form th:action="@{/add/doDelete}" th:object="${news}" method="post">-->
-<!--    <input type="hidden" th:field="${news.userInput}" />-->
-<!--            <input name="news" type="text" th:value="*{userInput}">-->
-<!--    <button type="submit">Delete</button>-->
-<!--</form>-->
 
-
-<!--&lt;!&ndash;    </p>&ndash;&gt;-->
-<!--    <p>Input: <input type="text" th:field="*{query}"></p>-->
-
-<!--<form th:action="@{/start}" th:object="${us}">-->
-<!--    <input name="myid" type="text" th:value="*{myid}">-->
-<!--</form>-->
-
-
-<!--<form name="myform" id="myform" action="#" th:action="@{/start/{input}}" th:object="${userInput}" method="post">-->
-<!--    <input id="myid" name="myid" type="text" maxlength="26" title="Please enter a valid ID" class="texter" th:field="*{userInput}" th:value="*{userInput}">-->
-
-<!--    <p>Model: <input type="text" th:field="*{model}"></p>-->
-<!--    <p>Color: <input type="text" th:field="*{color}"></p>-->
-<!--    <p>Production year: <input type="text" th:field="*{productionYear}"></p>-->
-<!--    <p><input type="submit" value="add new car"></p>-->
-
-
-<!--    <tr th:each="news: ${first}">-->
-<!--     -->
-
-<!--&lt;!&ndash;<form th:object="${news}" th:action="@{/start}" method="get">&ndash;&gt;-->
-<!--&lt;!&ndash;    <input type="text" name="search" id="search" th:value="${search}"/>&ndash;&gt;-->
-<!--&lt;!&ndash;    <input type="submit" value="Search"/>&ndash;&gt;-->
-
-
-
-
-<!--        <td th:text="${news.getSectionName() }"/>-->
-<!--        </td>-->
-
-<!--        <td th:text="${news.getWebTitle()}"/>-->
-<!--        </td>-->
-<!--        <td th:text="${news.getWebUrl()}"/>-->
-<!--        </td>-->
-<!--    </tr>-->
 </form>
     <p style="background-color:#F0E68C;">===============Delete Results============================ </p>
     <form th:action="@{/delete}"  method="post">
@@ -76,15 +42,6 @@
         <p><input type="submit" value="Delete"></p>
 <br>
     </form>
-<!--        <p style="background-color:#F0E68C;">===============Create DB============================ </p>-->
-<!--        <form th:action="@{/create}"  method="post">-->
-
-<!--            <p><input type="submit" value="Create"></p>-->
-<!--            <br>-->
-<!--        </form>-->
-<!--<th>Section:</th>-->
-<!--<th>Title:</th>-->
-<!--<th>URL:</th>-->
 
 <p style="background-color:#F0E68C;">===============Result of Search============================ </p>
             <table>
@@ -97,7 +54,6 @@
                 <td th:text="${user.getSectionName()}"/></td>
 
                 <td th:text="${user.getWebTitle()}"/></td>
-<!--                <td th:text="${user.getWebUrl() }"/></td>-->
 
                 <td> <a th:href="${user.getWebUrl()}" th:text="${user.getWebUrl()}" target="_blank"/></td>
 
@@ -106,33 +62,12 @@
             </table>
 
 
-<!--<tr th:each = "user: ${user}">-->
-<!--    <td th:text="${user.getSectionName()}"/></td>-->
-
-<!--    <td th:text="${user.getWebTitle()}"/></td>-->
-<!--    <td th:text="${user.getWebUrl() }"/></td>-->
-
-
-<!--<tr th:each="news2: ${us}">-->
-
-
-<!--                            <td th:text="${news2.getSectionName() }"/>-->
-<!--                            </td>-->
-
-<!--                            <td th:text="${news.getWebTitle()}"/>-->
-<!--                            </td>-->
-<!--                            <td th:text="${news.getWebUrl()}"/>-->
-<!--                            </td>-->
 
                 </tr>
 
                 <br>
             </table>
 
-<!--<tr th:each="news: ${search}">-->
-
-<!--    <td th:text="${news.input}"/>-->
-<!--    </tr>-->
 
 
 </body>

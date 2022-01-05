@@ -2,20 +2,20 @@ package com.example.newsdatabaseapp.api;
 
 public class ResponseWrapper {
 
-  private Response response;
+    private Response response;
 
-  public Response getResponse() {
-    return response;
-  }
+    public ResponseWrapper(final Response response) {
+        this.response = response;
+    }
 
-  public void setResponse(final Response response) {
-    this.response = response;
-  }
+    public ResponseWrapper() {
+    }
 
-  public ResponseWrapper(final Response response) {
-    this.response = response;
-  }
+    public Response getResponse() {
+        return response;
+    }
 
-  public ResponseWrapper() {
-  }
+    public void setResponse(final Response response) {
+        this.response = response;
+    }
 }
