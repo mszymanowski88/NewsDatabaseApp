@@ -5,16 +5,16 @@ import java.util.Arrays;
 
 public class Response {
 
-    String userInput;
-    String status;
-    String userTier;
-    int total;
-    int startIndex;
-    int pageSize;
-    int currentPage;
-    int pages;
-    String orderBy;
-    Article[] results;
+    private String userInput;
+    private  String status;
+    private String userTier;
+    private int total;
+    private int startIndex;
+    private int pageSize;
+    private int currentPage;
+    private  int pages;
+    private  String orderBy;
+    private  Article[] results;
 
     public Response() {
 

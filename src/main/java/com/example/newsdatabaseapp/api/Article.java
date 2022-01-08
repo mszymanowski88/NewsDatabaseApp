@@ -2,17 +2,17 @@ package com.example.newsdatabaseapp.api;
 
 
 public class Article {
-    String input;
-    String id;
-    String type;
-    String sectionId;
-    String sectionName;
-    String webPublicationDate;
-    String webTitle;
-    String webUrl;
-    String apiUrl;
+    private String input;
+    private String id;
+    private  String type;
+    private String sectionId;
+    private String sectionName;
+    private String webPublicationDate;
+    private  String webTitle;
+    private String webUrl;
+    private String apiUrl;
     boolean isHosted;
-    String pillarId;
+    private String pillarId;
     private String pillarName;
 
 

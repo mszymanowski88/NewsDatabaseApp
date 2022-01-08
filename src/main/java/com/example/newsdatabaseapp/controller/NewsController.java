@@ -15,7 +15,7 @@ import java.text.ParseException;
 public class NewsController {
 
 
-    NewsDaoImpl newsDaoImpl;
+    private NewsDaoImpl newsDaoImpl;
 
 
     @Autowired
@@ -30,7 +30,7 @@ public class NewsController {
     public String showResultFromInput(Model model) {
 
 
-        model.addAttribute("user", newsDaoImpl.findAll());
+        model.addAttribute("news", newsDaoImpl.findAll());
 
 
         return "start";

@@ -50,12 +50,12 @@
                     <th>Title:</th>
                     <th>URL:</th>
 
-                <tr th:each = "user: ${user}">
-                <td th:text="${user.getSectionName()}"/></td>
+                <tr th:each = "news: ${news}">
+                <td th:text="${news.getSectionName()}"/></td>
 
-                <td th:text="${user.getWebTitle()}"/></td>
+                <td th:text="${news.getWebTitle()}"/></td>
 
-                <td> <a th:href="${user.getWebUrl()}" th:text="${user.getWebUrl()}" target="_blank"/></td>
+                <td> <a th:href="${news.getWebUrl()}" th:text="${news.getWebUrl()}" target="_blank"/></td>
 
 
                 </tr>

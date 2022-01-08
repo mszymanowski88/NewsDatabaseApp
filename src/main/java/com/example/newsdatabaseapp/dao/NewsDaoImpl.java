@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Repository
-public class NewsDaoImpl {
+public class NewsDaoImpl implements NewsDao {
 
 
 
@@ -32,14 +32,14 @@ public class NewsDaoImpl {
 
     }
 
-
+    @Override
     public void initDB() {
         String sql = "CREATE  TABLE news (Section varchar(255), Title varchar(255), URL varchar(255))";
         databaseConfig.getJdbcTemplate().update(sql);
 
     }
 
-
+@Override
     public void saveNews(String query) throws UnirestException {
 
 
@@ -55,7 +55,7 @@ public class NewsDaoImpl {
 
     }
 
-
+    @Override
     public void deleteDatabase() {
 
 
@@ -64,7 +64,7 @@ public class NewsDaoImpl {
         databaseConfig.getJdbcTemplate().update(sql);
     }
 
-
+    @Override
     public List<Article> findAll() {
         String sql = "select * from news";
         RowMapper<Article> rm = new RowMapper<Article>() {
@@ -75,6 +75,13 @@ public class NewsDaoImpl {
                         resultSet.getString("Title"),
                         resultSet.getString("URL"));
 
+
+//             Article user1 = () ->{}
+//
+//                        new Article(
+//                        resultSet.getString("Section"),
+//                        resultSet.getString("Title"),
+//                        resultSet.getString("URL"));
 
                 return user;
             }
